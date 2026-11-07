@@ -1,0 +1,796 @@
+Output folder: D:\Work\ijoc\bench_out\20261107_155841
+Measuring idle baseline (10 s, keep the GPU idle)...
+Idle baseline: {'idle_power_w': 19.4, 'idle_temp_c': 55, 'idle_vram_gb': 0.23}
+Cooldown target before each block: 61 C
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "nvidia_smi": "name, driver_version, memory.total [MiB], power.limit [W], power.max_limit [W], clocks.max.sm [MHz]\nNVIDIA GeForce RTX 4060 Laptop GPU, 592.00, 8188 MiB, [N/A], 140.00 W, 3105 MHz",
+  "llama_server_version": "version: 0.9.0-dev (build 12184, commit c0ab6e5c0)\nbuilt with Clang 20.1.8 for Windows x86_64",
+  "ollama_version": "ollama version is 0.40.15"
+}
+
+Rough time estimate: 45-90 minutes. Keep the laptop awake, close other apps, and don't use the GPU meanwhile.
+[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+parsing GGUF [K
+using existing layer sha256:6c1a2b41161032677be168d354123594c0e6e67d2b9227c84f296ad037c728ff [K
+writing manifest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+parsing GGUF [K
+using existing layer sha256:6c1a2b41161032677be168d354123594c0e6e67d2b9227c84f296ad037c728ff [K
+writing manifest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+parsing GGUF [K
+using existing layer sha256:6c1a2b41161032677be168d354123594c0e6e67d2b9227c84f296ad037c728ff [K
+writing manifest [K
+success [K[?25h[?2026l
+
+
+########## llamacpp | plugged_default ##########
+Starting llama-server: C:\llama.cpp\llama-server.exe -m D:\Work\ijoc\Llama-3.2-3B-Instruct-Q4_K_M.gguf -ngl 99 -c 4096 --port 8080
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 139.598 W
+
+=== target context 128 tokens ===
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 69 ms | 104.8 tok/s | 1.41 tok/J | 69C | peak VRAM 2.72 GB
+  run 2/10: TTFT 43 ms | 104.8 tok/s | 1.35 tok/J | 70C | peak VRAM 2.72 GB
+  run 3/10: TTFT 44 ms | 104.7 tok/s | 1.30 tok/J | 71C | peak VRAM 2.72 GB
+  run 4/10: TTFT 44 ms | 105.2 tok/s | 1.25 tok/J | 71C | peak VRAM 2.72 GB
+  run 5/10: TTFT 43 ms | 105.0 tok/s | 1.19 tok/J | 72C | peak VRAM 2.72 GB
+  run 6/10: TTFT 70 ms | 104.9 tok/s | 1.34 tok/J | 72C | peak VRAM 2.72 GB
+  run 7/10: TTFT 41 ms | 104.9 tok/s | 1.29 tok/J | 73C | peak VRAM 2.72 GB
+  run 8/10: TTFT 42 ms | 104.9 tok/s | 1.25 tok/J | 74C | peak VRAM 2.72 GB
+  run 9/10: TTFT 54 ms | 104.9 tok/s | 1.27 tok/J | 74C | peak VRAM 2.72 GB
+  run 10/10: TTFT 46 ms | 105.1 tok/s | 1.35 tok/J | 74C | peak VRAM 2.72 GB
+
+=== target context 512 tokens ===
+  cooling: 69C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 118 ms | 103.2 tok/s | 1.23 tok/J | 74C | peak VRAM 2.72 GB
+  run 2/10: TTFT 116 ms | 102.7 tok/s | 1.13 tok/J | 75C | peak VRAM 2.72 GB
+  run 3/10: TTFT 137 ms | 103.0 tok/s | 1.26 tok/J | 75C | peak VRAM 2.72 GB
+  run 4/10: TTFT 118 ms | 102.7 tok/s | 1.26 tok/J | 76C | peak VRAM 2.72 GB
+  run 5/10: TTFT 117 ms | 102.8 tok/s | 1.27 tok/J | 76C | peak VRAM 2.72 GB
+  run 6/10: TTFT 136 ms | 102.8 tok/s | 1.16 tok/J | 76C | peak VRAM 2.72 GB
+  run 7/10: TTFT 132 ms | 102.6 tok/s | 1.22 tok/J | 76C | peak VRAM 2.72 GB
+  run 8/10: TTFT 137 ms | 102.7 tok/s | 1.20 tok/J | 77C | peak VRAM 2.72 GB
+  run 9/10: TTFT 119 ms | 102.8 tok/s | 1.22 tok/J | 77C | peak VRAM 2.72 GB
+  run 10/10: TTFT 141 ms | 102.6 tok/s | 1.25 tok/J | 77C | peak VRAM 2.72 GB
+
+=== target context 2048 tokens ===
+  cooling: 77C -> 61C
+  cooling: 62C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 450 ms | 96.1 tok/s | 1.03 tok/J | 79C | peak VRAM 2.72 GB
+  run 2/10: TTFT 433 ms | 96.1 tok/s | 0.94 tok/J | 77C | peak VRAM 2.72 GB
+  run 3/10: TTFT 448 ms | 96.0 tok/s | 1.05 tok/J | 77C | peak VRAM 2.72 GB
+  run 4/10: TTFT 462 ms | 95.9 tok/s | 0.96 tok/J | 79C | peak VRAM 2.72 GB
+  run 5/10: TTFT 455 ms | 96.2 tok/s | 1.02 tok/J | 81C | peak VRAM 2.72 GB
+  run 6/10: TTFT 445 ms | 96.4 tok/s | 1.01 tok/J | 79C | peak VRAM 2.72 GB
+  run 7/10: TTFT 437 ms | 96.2 tok/s | 1.04 tok/J | 77C | peak VRAM 2.72 GB
+  run 8/10: TTFT 429 ms | 96.2 tok/s | 1.03 tok/J | 80C | peak VRAM 2.72 GB
+  run 9/10: TTFT 452 ms | 96.3 tok/s | 1.06 tok/J | 78C | peak VRAM 2.72 GB
+  run 10/10: TTFT 437 ms | 96.0 tok/s | 1.04 tok/J | 82C | peak VRAM 2.72 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+--- sustained load test (240 back-to-back runs) ---
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 131.233 W
+
+=== target context 512 tokens ===
+  warmup 1/2
+  warmup 2/2
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/240: TTFT 119 ms | 102.9 tok/s | 1.21 tok/J | 78C | peak VRAM 2.72 GB
+  run 2/240: TTFT 120 ms | 103.2 tok/s | 1.27 tok/J | 79C | peak VRAM 2.72 GB
+  run 3/240: TTFT 118 ms | 102.9 tok/s | 1.24 tok/J | 79C | peak VRAM 2.72 GB
+  run 4/240: TTFT 128 ms | 102.0 tok/s | 1.10 tok/J | 79C | peak VRAM 2.72 GB
+  run 5/240: TTFT 137 ms | 103.0 tok/s | 1.29 tok/J | 79C | peak VRAM 2.72 GB
+  run 6/240: TTFT 124 ms | 102.6 tok/s | 1.13 tok/J | 80C | peak VRAM 2.72 GB
+  run 7/240: TTFT 134 ms | 103.0 tok/s | 1.25 tok/J | 79C | peak VRAM 2.72 GB
+  run 8/240: TTFT 143 ms | 102.5 tok/s | 1.11 tok/J | 79C | peak VRAM 2.72 GB
+  run 9/240: TTFT 145 ms | 103.0 tok/s | 1.18 tok/J | 79C | peak VRAM 2.72 GB
+  run 10/240: TTFT 142 ms | 103.0 tok/s | 1.27 tok/J | 79C | peak VRAM 2.72 GB
+  run 11/240: TTFT 129 ms | 102.4 tok/s | 1.13 tok/J | 79C | peak VRAM 2.72 GB
+  run 12/240: TTFT 122 ms | 102.6 tok/s | 1.25 tok/J | 80C | peak VRAM 2.72 GB
+  run 13/240: TTFT 127 ms | 102.6 tok/s | 1.16 tok/J | 80C | peak VRAM 2.72 GB
+  run 14/240: TTFT 127 ms | 102.8 tok/s | 1.28 tok/J | 80C | peak VRAM 2.72 GB
+  run 15/240: TTFT 126 ms | 102.9 tok/s | 1.20 tok/J | 80C | peak VRAM 2.72 GB
+  run 16/240: TTFT 128 ms | 102.7 tok/s | 1.13 tok/J | 80C | peak VRAM 2.72 GB
+  run 17/240: TTFT 126 ms | 102.8 tok/s | 1.20 tok/J | 80C | peak VRAM 2.72 GB
+  run 18/240: TTFT 133 ms | 102.7 tok/s | 1.08 tok/J | 80C | peak VRAM 2.72 GB
+  run 19/240: TTFT 140 ms | 102.7 tok/s | 1.15 tok/J | 80C | peak VRAM 2.72 GB
+  run 20/240: TTFT 117 ms | 102.9 tok/s | 1.29 tok/J | 80C | peak VRAM 2.72 GB
+  run 21/240: TTFT 118 ms | 103.0 tok/s | 1.20 tok/J | 80C | peak VRAM 2.72 GB
+  run 22/240: TTFT 147 ms | 102.6 tok/s | 1.14 tok/J | 82C | peak VRAM 2.72 GB
+  run 23/240: TTFT 116 ms | 102.8 tok/s | 1.21 tok/J | 80C | peak VRAM 2.72 GB
+  run 24/240: TTFT 133 ms | 102.5 tok/s | 1.15 tok/J | 81C | peak VRAM 2.72 GB
+  run 25/240: TTFT 135 ms | 102.5 tok/s | 1.11 tok/J | 81C | peak VRAM 2.72 GB
+  run 26/240: TTFT 165 ms | 101.9 tok/s | 1.24 tok/J | 81C | peak VRAM 2.72 GB
+  run 27/240: TTFT 173 ms | 101.4 tok/s | 1.18 tok/J | 81C | peak VRAM 2.72 GB
+  run 28/240: TTFT 135 ms | 102.6 tok/s | 1.14 tok/J | 81C | peak VRAM 2.72 GB
+  run 29/240: TTFT 138 ms | 102.4 tok/s | 1.22 tok/J | 81C | peak VRAM 2.72 GB
+  run 30/240: TTFT 139 ms | 102.0 tok/s | 1.25 tok/J | 81C | peak VRAM 2.72 GB
+  run 31/240: TTFT 133 ms | 102.7 tok/s | 1.18 tok/J | 81C | peak VRAM 2.72 GB
+  run 32/240: TTFT 132 ms | 103.0 tok/s | 1.08 tok/J | 81C | peak VRAM 2.72 GB
+  run 33/240: TTFT 133 ms | 102.2 tok/s | 1.15 tok/J | 81C | peak VRAM 2.72 GB
+  run 34/240: TTFT 142 ms | 103.0 tok/s | 1.23 tok/J | 81C | peak VRAM 2.72 GB
+  run 35/240: TTFT 118 ms | 102.2 tok/s | 1.16 tok/J | 81C | peak VRAM 2.72 GB
+  run 36/240: TTFT 122 ms | 101.5 tok/s | 1.28 tok/J | 82C | peak VRAM 2.72 GB
+  run 37/240: TTFT 131 ms | 101.1 tok/s | 1.17 tok/J | 83C | peak VRAM 2.72 GB
+  run 38/240: TTFT 146 ms | 101.0 tok/s | 1.23 tok/J | 82C | peak VRAM 2.72 GB
+  run 39/240: TTFT 117 ms | 103.2 tok/s | 1.23 tok/J | 82C | peak VRAM 2.72 GB
+  run 40/240: TTFT 121 ms | 101.6 tok/s | 1.15 tok/J | 82C | peak VRAM 2.72 GB
+  run 41/240: TTFT 144 ms | 102.1 tok/s | 1.24 tok/J | 82C | peak VRAM 2.72 GB
+  run 42/240: TTFT 137 ms | 102.0 tok/s | 1.19 tok/J | 82C | peak VRAM 2.72 GB
+  run 43/240: TTFT 116 ms | 102.3 tok/s | 1.23 tok/J | 82C | peak VRAM 2.72 GB
+  run 44/240: TTFT 120 ms | 102.1 tok/s | 1.20 tok/J | 82C | peak VRAM 2.72 GB
+  run 45/240: TTFT 132 ms | 102.4 tok/s | 1.18 tok/J | 82C | peak VRAM 2.72 GB
+  run 46/240: TTFT 151 ms | 102.2 tok/s | 1.31 tok/J | 82C | peak VRAM 2.72 GB
+  run 47/240: TTFT 145 ms | 102.3 tok/s | 1.10 tok/J | 82C | peak VRAM 2.72 GB
+  run 48/240: TTFT 157 ms | 100.7 tok/s | 1.18 tok/J | 82C | peak VRAM 2.72 GB
+  run 49/240: TTFT 138 ms | 102.3 tok/s | 1.16 tok/J | 82C | peak VRAM 2.72 GB
+  run 50/240: TTFT 140 ms | 102.2 tok/s | 1.14 tok/J | 82C | peak VRAM 2.72 GB
+  run 51/240: TTFT 119 ms | 101.9 tok/s | 1.23 tok/J | 82C | peak VRAM 2.72 GB
+  run 52/240: TTFT 119 ms | 102.5 tok/s | 1.16 tok/J | 82C | peak VRAM 2.72 GB
+  run 53/240: TTFT 140 ms | 102.5 tok/s | 1.21 tok/J | 83C | peak VRAM 2.72 GB
+  run 54/240: TTFT 152 ms | 101.8 tok/s | 1.13 tok/J | 82C | peak VRAM 2.72 GB
+  run 55/240: TTFT 129 ms | 102.3 tok/s | 1.20 tok/J | 82C | peak VRAM 2.72 GB
+  run 56/240: TTFT 123 ms | 102.8 tok/s | 1.28 tok/J | 82C | peak VRAM 2.72 GB
+  run 57/240: TTFT 122 ms | 102.6 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 58/240: TTFT 122 ms | 102.8 tok/s | 1.16 tok/J | 83C | peak VRAM 2.72 GB
+  run 59/240: TTFT 122 ms | 102.0 tok/s | 1.19 tok/J | 83C | peak VRAM 2.72 GB
+  run 60/240: TTFT 120 ms | 102.7 tok/s | 1.27 tok/J | 82C | peak VRAM 2.72 GB
+  run 61/240: TTFT 144 ms | 102.7 tok/s | 1.17 tok/J | 83C | peak VRAM 2.72 GB
+  run 62/240: TTFT 135 ms | 102.7 tok/s | 1.21 tok/J | 83C | peak VRAM 2.72 GB
+  run 63/240: TTFT 131 ms | 102.7 tok/s | 1.18 tok/J | 83C | peak VRAM 2.72 GB
+  run 64/240: TTFT 133 ms | 102.7 tok/s | 1.22 tok/J | 83C | peak VRAM 2.72 GB
+  run 65/240: TTFT 132 ms | 102.9 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 66/240: TTFT 143 ms | 103.0 tok/s | 1.21 tok/J | 83C | peak VRAM 2.72 GB
+  run 67/240: TTFT 121 ms | 103.0 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 68/240: TTFT 124 ms | 102.9 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 69/240: TTFT 137 ms | 102.7 tok/s | 1.10 tok/J | 83C | peak VRAM 2.72 GB
+  run 70/240: TTFT 140 ms | 102.5 tok/s | 1.17 tok/J | 83C | peak VRAM 2.72 GB
+  run 71/240: TTFT 143 ms | 103.2 tok/s | 1.25 tok/J | 83C | peak VRAM 2.72 GB
+  run 72/240: TTFT 136 ms | 102.9 tok/s | 1.15 tok/J | 83C | peak VRAM 2.72 GB
+  run 73/240: TTFT 146 ms | 102.9 tok/s | 1.20 tok/J | 83C | peak VRAM 2.72 GB
+  run 74/240: TTFT 124 ms | 102.9 tok/s | 1.24 tok/J | 83C | peak VRAM 2.72 GB
+  run 75/240: TTFT 131 ms | 103.3 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 76/240: TTFT 142 ms | 103.2 tok/s | 1.06 tok/J | 83C | peak VRAM 2.72 GB
+  run 77/240: TTFT 144 ms | 103.4 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 78/240: TTFT 137 ms | 102.8 tok/s | 1.11 tok/J | 83C | peak VRAM 2.72 GB
+  run 79/240: TTFT 121 ms | 103.1 tok/s | 1.29 tok/J | 83C | peak VRAM 2.72 GB
+  run 80/240: TTFT 139 ms | 103.4 tok/s | 1.20 tok/J | 83C | peak VRAM 2.72 GB
+  run 81/240: TTFT 116 ms | 103.3 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 82/240: TTFT 131 ms | 103.1 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 83/240: TTFT 127 ms | 103.3 tok/s | 1.06 tok/J | 83C | peak VRAM 2.72 GB
+  run 84/240: TTFT 126 ms | 102.5 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 85/240: TTFT 124 ms | 102.7 tok/s | 1.27 tok/J | 83C | peak VRAM 2.72 GB
+  run 86/240: TTFT 119 ms | 102.4 tok/s | 1.19 tok/J | 83C | peak VRAM 2.72 GB
+  run 87/240: TTFT 116 ms | 102.5 tok/s | 1.07 tok/J | 83C | peak VRAM 2.72 GB
+  run 88/240: TTFT 115 ms | 102.8 tok/s | 1.19 tok/J | 83C | peak VRAM 2.72 GB
+  run 89/240: TTFT 134 ms | 102.0 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 90/240: TTFT 116 ms | 102.9 tok/s | 1.18 tok/J | 83C | peak VRAM 2.72 GB
+  run 91/240: TTFT 114 ms | 102.7 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 92/240: TTFT 132 ms | 102.7 tok/s | 1.17 tok/J | 83C | peak VRAM 2.72 GB
+  run 93/240: TTFT 121 ms | 102.9 tok/s | 1.31 tok/J | 83C | peak VRAM 2.72 GB
+  run 94/240: TTFT 131 ms | 103.0 tok/s | 1.18 tok/J | 83C | peak VRAM 2.72 GB
+  run 95/240: TTFT 145 ms | 103.1 tok/s | 1.14 tok/J | 83C | peak VRAM 2.72 GB
+  run 96/240: TTFT 114 ms | 103.1 tok/s | 1.23 tok/J | 83C | peak VRAM 2.72 GB
+  run 97/240: TTFT 115 ms | 102.9 tok/s | 1.11 tok/J | 83C | peak VRAM 2.72 GB
+  run 98/240: TTFT 141 ms | 102.7 tok/s | 1.18 tok/J | 83C | peak VRAM 2.72 GB
+  run 99/240: TTFT 115 ms | 102.9 tok/s | 1.12 tok/J | 83C | peak VRAM 2.72 GB
+  run 100/240: TTFT 113 ms | 102.8 tok/s | 1.18 tok/J | 83C | peak VRAM 2.72 GB
+  run 101/240: TTFT 135 ms | 102.9 tok/s | 1.07 tok/J | 84C | peak VRAM 2.72 GB
+  run 102/240: TTFT 127 ms | 102.9 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 103/240: TTFT 127 ms | 102.8 tok/s | 1.08 tok/J | 83C | peak VRAM 2.72 GB
+  run 104/240: TTFT 129 ms | 103.0 tok/s | 1.23 tok/J | 84C | peak VRAM 2.72 GB
+  run 105/240: TTFT 136 ms | 103.1 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 106/240: TTFT 120 ms | 102.8 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 107/240: TTFT 125 ms | 102.7 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 108/240: TTFT 126 ms | 102.2 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 109/240: TTFT 126 ms | 103.0 tok/s | 1.14 tok/J | 84C | peak VRAM 2.72 GB
+  run 110/240: TTFT 123 ms | 103.1 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 111/240: TTFT 124 ms | 102.7 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 112/240: TTFT 143 ms | 103.1 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 113/240: TTFT 123 ms | 102.9 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 114/240: TTFT 127 ms | 102.9 tok/s | 1.11 tok/J | 84C | peak VRAM 2.72 GB
+  run 115/240: TTFT 154 ms | 102.9 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 116/240: TTFT 144 ms | 102.7 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 117/240: TTFT 147 ms | 103.1 tok/s | 1.09 tok/J | 84C | peak VRAM 2.72 GB
+  run 118/240: TTFT 140 ms | 102.8 tok/s | 1.16 tok/J | 84C | peak VRAM 2.72 GB
+  run 119/240: TTFT 149 ms | 103.2 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 120/240: TTFT 132 ms | 102.8 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 121/240: TTFT 126 ms | 102.6 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 122/240: TTFT 120 ms | 102.7 tok/s | 1.29 tok/J | 84C | peak VRAM 2.72 GB
+  run 123/240: TTFT 143 ms | 102.8 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 124/240: TTFT 124 ms | 102.7 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 125/240: TTFT 145 ms | 102.7 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 126/240: TTFT 124 ms | 102.5 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 127/240: TTFT 141 ms | 102.7 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 128/240: TTFT 139 ms | 102.4 tok/s | 1.12 tok/J | 84C | peak VRAM 2.72 GB
+  run 129/240: TTFT 125 ms | 102.4 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 130/240: TTFT 138 ms | 102.7 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 131/240: TTFT 117 ms | 102.6 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 132/240: TTFT 117 ms | 102.6 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 133/240: TTFT 124 ms | 102.8 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 134/240: TTFT 142 ms | 102.5 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 135/240: TTFT 127 ms | 102.4 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 136/240: TTFT 146 ms | 102.5 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 137/240: TTFT 141 ms | 102.3 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 138/240: TTFT 147 ms | 102.8 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 139/240: TTFT 142 ms | 102.8 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 140/240: TTFT 124 ms | 103.1 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 141/240: TTFT 125 ms | 103.0 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 142/240: TTFT 124 ms | 102.9 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 143/240: TTFT 126 ms | 102.9 tok/s | 1.28 tok/J | 84C | peak VRAM 2.72 GB
+  run 144/240: TTFT 137 ms | 102.7 tok/s | 1.16 tok/J | 84C | peak VRAM 2.72 GB
+  run 145/240: TTFT 140 ms | 102.9 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 146/240: TTFT 118 ms | 102.5 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 147/240: TTFT 149 ms | 103.0 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 148/240: TTFT 122 ms | 102.8 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 149/240: TTFT 148 ms | 103.2 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 150/240: TTFT 117 ms | 103.4 tok/s | 1.14 tok/J | 84C | peak VRAM 2.72 GB
+  run 151/240: TTFT 126 ms | 103.2 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 152/240: TTFT 133 ms | 103.1 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 153/240: TTFT 127 ms | 103.0 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 154/240: TTFT 137 ms | 103.2 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 155/240: TTFT 122 ms | 103.1 tok/s | 1.28 tok/J | 84C | peak VRAM 2.72 GB
+  run 156/240: TTFT 121 ms | 103.0 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 157/240: TTFT 128 ms | 103.4 tok/s | 1.08 tok/J | 84C | peak VRAM 2.72 GB
+  run 158/240: TTFT 137 ms | 102.9 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 159/240: TTFT 137 ms | 103.1 tok/s | 1.09 tok/J | 84C | peak VRAM 2.72 GB
+  run 160/240: TTFT 127 ms | 102.8 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 161/240: TTFT 142 ms | 102.7 tok/s | 1.08 tok/J | 84C | peak VRAM 2.72 GB
+  run 162/240: TTFT 141 ms | 102.8 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 163/240: TTFT 128 ms | 103.0 tok/s | 1.31 tok/J | 84C | peak VRAM 2.72 GB
+  run 164/240: TTFT 124 ms | 102.6 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 165/240: TTFT 146 ms | 102.8 tok/s | 1.07 tok/J | 85C | peak VRAM 2.72 GB
+  run 166/240: TTFT 126 ms | 103.0 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 167/240: TTFT 141 ms | 103.1 tok/s | 1.05 tok/J | 84C | peak VRAM 2.72 GB
+  run 168/240: TTFT 146 ms | 103.1 tok/s | 1.14 tok/J | 84C | peak VRAM 2.72 GB
+  run 169/240: TTFT 125 ms | 102.8 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 170/240: TTFT 126 ms | 103.0 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 171/240: TTFT 149 ms | 102.8 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 172/240: TTFT 122 ms | 102.8 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 173/240: TTFT 127 ms | 103.1 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 174/240: TTFT 122 ms | 103.2 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 175/240: TTFT 125 ms | 103.1 tok/s | 1.11 tok/J | 84C | peak VRAM 2.72 GB
+  run 176/240: TTFT 143 ms | 103.1 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 177/240: TTFT 122 ms | 103.1 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 178/240: TTFT 121 ms | 103.2 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 179/240: TTFT 126 ms | 103.0 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 180/240: TTFT 136 ms | 103.1 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 181/240: TTFT 144 ms | 103.1 tok/s | 1.09 tok/J | 84C | peak VRAM 2.72 GB
+  run 182/240: TTFT 150 ms | 103.1 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 183/240: TTFT 129 ms | 103.0 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 184/240: TTFT 125 ms | 102.3 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 185/240: TTFT 143 ms | 102.8 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 186/240: TTFT 143 ms | 102.9 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 187/240: TTFT 123 ms | 102.9 tok/s | 1.23 tok/J | 84C | peak VRAM 2.72 GB
+  run 188/240: TTFT 142 ms | 102.8 tok/s | 1.09 tok/J | 84C | peak VRAM 2.72 GB
+  run 189/240: TTFT 123 ms | 102.5 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 190/240: TTFT 125 ms | 102.7 tok/s | 1.11 tok/J | 86C | peak VRAM 2.72 GB
+  run 191/240: TTFT 115 ms | 103.0 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 192/240: TTFT 120 ms | 102.5 tok/s | 1.14 tok/J | 84C | peak VRAM 2.72 GB
+  run 193/240: TTFT 119 ms | 102.8 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 194/240: TTFT 128 ms | 102.9 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 195/240: TTFT 119 ms | 102.7 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 196/240: TTFT 142 ms | 102.6 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 197/240: TTFT 133 ms | 102.7 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 198/240: TTFT 119 ms | 102.6 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 199/240: TTFT 131 ms | 102.7 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 200/240: TTFT 116 ms | 102.7 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 201/240: TTFT 117 ms | 102.7 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 202/240: TTFT 128 ms | 102.7 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 203/240: TTFT 128 ms | 102.8 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 204/240: TTFT 127 ms | 102.7 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 205/240: TTFT 122 ms | 102.5 tok/s | 1.11 tok/J | 84C | peak VRAM 2.72 GB
+  run 206/240: TTFT 150 ms | 102.6 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 207/240: TTFT 122 ms | 102.7 tok/s | 1.19 tok/J | 84C | peak VRAM 2.72 GB
+  run 208/240: TTFT 125 ms | 102.2 tok/s | 1.15 tok/J | 84C | peak VRAM 2.72 GB
+  run 209/240: TTFT 126 ms | 102.0 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 210/240: TTFT 147 ms | 102.6 tok/s | 1.11 tok/J | 84C | peak VRAM 2.72 GB
+  run 211/240: TTFT 127 ms | 102.6 tok/s | 1.27 tok/J | 84C | peak VRAM 2.72 GB
+  run 212/240: TTFT 137 ms | 102.6 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 213/240: TTFT 143 ms | 102.8 tok/s | 1.16 tok/J | 84C | peak VRAM 2.72 GB
+  run 214/240: TTFT 143 ms | 103.0 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 215/240: TTFT 126 ms | 103.0 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 216/240: TTFT 127 ms | 102.9 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 217/240: TTFT 126 ms | 103.0 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 218/240: TTFT 145 ms | 102.6 tok/s | 1.14 tok/J | 86C | peak VRAM 2.72 GB
+  run 219/240: TTFT 122 ms | 103.1 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 220/240: TTFT 140 ms | 102.9 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 221/240: TTFT 147 ms | 102.9 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 222/240: TTFT 150 ms | 103.3 tok/s | 1.21 tok/J | 84C | peak VRAM 2.72 GB
+  run 223/240: TTFT 119 ms | 102.9 tok/s | 1.12 tok/J | 84C | peak VRAM 2.72 GB
+  run 224/240: TTFT 119 ms | 102.5 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 225/240: TTFT 118 ms | 103.2 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 226/240: TTFT 119 ms | 103.1 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 227/240: TTFT 139 ms | 102.4 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 228/240: TTFT 149 ms | 103.1 tok/s | 1.20 tok/J | 84C | peak VRAM 2.72 GB
+  run 229/240: TTFT 138 ms | 103.3 tok/s | 1.10 tok/J | 84C | peak VRAM 2.72 GB
+  run 230/240: TTFT 127 ms | 103.2 tok/s | 1.22 tok/J | 84C | peak VRAM 2.72 GB
+  run 231/240: TTFT 126 ms | 103.0 tok/s | 1.14 tok/J | 84C | peak VRAM 2.72 GB
+  run 232/240: TTFT 117 ms | 102.9 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 233/240: TTFT 131 ms | 102.8 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 234/240: TTFT 124 ms | 102.6 tok/s | 1.24 tok/J | 84C | peak VRAM 2.72 GB
+  run 235/240: TTFT 116 ms | 102.9 tok/s | 1.18 tok/J | 84C | peak VRAM 2.72 GB
+  run 236/240: TTFT 122 ms | 102.8 tok/s | 1.25 tok/J | 84C | peak VRAM 2.72 GB
+  run 237/240: TTFT 138 ms | 102.8 tok/s | 1.13 tok/J | 84C | peak VRAM 2.72 GB
+  run 238/240: TTFT 124 ms | 102.7 tok/s | 1.26 tok/J | 84C | peak VRAM 2.72 GB
+  run 239/240: TTFT 126 ms | 102.6 tok/s | 1.17 tok/J | 84C | peak VRAM 2.72 GB
+  run 240/240: TTFT 121 ms | 102.8 tok/s | 1.25 tok/J | 85C | peak VRAM 2.72 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+########## ollama | plugged_default ##########
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 132.245 W
+
+=== target context 128 tokens ===
+  cooling: 70C -> 61C
+  cooling: 69C -> 61C
+  cooling: 67C -> 61C
+  cooling: 68C -> 61C
+  cooling: 65C -> 61C
+  cooling: 64C -> 61C
+  cooling: 63C -> 61C
+  cooling: 63C -> 61C
+  cooling: 62C -> 61C
+  cooling: 62C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 78 ms | 106.0 tok/s | 1.27 tok/J | 76C | peak VRAM 2.72 GB
+  run 2/10: TTFT 65 ms | 105.6 tok/s | 1.22 tok/J | 76C | peak VRAM 2.72 GB
+  run 3/10: TTFT 80 ms | 105.3 tok/s | 1.35 tok/J | 77C | peak VRAM 2.72 GB
+  run 4/10: TTFT 84 ms | 105.6 tok/s | 1.34 tok/J | 77C | peak VRAM 2.72 GB
+  run 5/10: TTFT 69 ms | 105.7 tok/s | 1.26 tok/J | 78C | peak VRAM 2.72 GB
+  run 6/10: TTFT 77 ms | 105.6 tok/s | 1.18 tok/J | 78C | peak VRAM 2.72 GB
+  run 7/10: TTFT 70 ms | 105.4 tok/s | 1.33 tok/J | 78C | peak VRAM 2.72 GB
+  run 8/10: TTFT 85 ms | 105.5 tok/s | 1.30 tok/J | 79C | peak VRAM 2.72 GB
+  run 9/10: TTFT 61 ms | 105.3 tok/s | 1.25 tok/J | 79C | peak VRAM 2.72 GB
+  run 10/10: TTFT 84 ms | 105.2 tok/s | 1.30 tok/J | 79C | peak VRAM 2.72 GB
+
+=== target context 512 tokens ===
+  cooling: 71C -> 61C
+  cooling: 65C -> 61C
+  cooling: 63C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 142 ms | 102.8 tok/s | 1.29 tok/J | 77C | peak VRAM 2.72 GB
+  run 2/10: TTFT 154 ms | 102.9 tok/s | 1.18 tok/J | 77C | peak VRAM 2.72 GB
+  run 3/10: TTFT 149 ms | 103.0 tok/s | 1.23 tok/J | 78C | peak VRAM 2.72 GB
+  run 4/10: TTFT 133 ms | 102.9 tok/s | 1.17 tok/J | 78C | peak VRAM 2.72 GB
+  run 5/10: TTFT 151 ms | 102.9 tok/s | 1.22 tok/J | 79C | peak VRAM 2.72 GB
+  run 6/10: TTFT 152 ms | 102.9 tok/s | 1.11 tok/J | 79C | peak VRAM 2.72 GB
+  run 7/10: TTFT 156 ms | 102.8 tok/s | 1.18 tok/J | 79C | peak VRAM 2.72 GB
+  run 8/10: TTFT 150 ms | 103.6 tok/s | 1.32 tok/J | 79C | peak VRAM 2.72 GB
+  run 9/10: TTFT 141 ms | 103.5 tok/s | 1.30 tok/J | 80C | peak VRAM 2.72 GB
+  run 10/10: TTFT 161 ms | 103.6 tok/s | 1.14 tok/J | 80C | peak VRAM 2.72 GB
+
+=== target context 2048 tokens ===
+  cooling: 74C -> 61C
+  cooling: 65C -> 61C
+  cooling: 63C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.73 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 482 ms | 96.5 tok/s | 1.00 tok/J | 80C | peak VRAM 2.73 GB
+  run 2/10: TTFT 480 ms | 96.7 tok/s | 1.03 tok/J | 78C | peak VRAM 2.73 GB
+  run 3/10: TTFT 476 ms | 96.5 tok/s | 0.92 tok/J | 80C | peak VRAM 2.73 GB
+  run 4/10: TTFT 475 ms | 96.7 tok/s | 0.96 tok/J | 82C | peak VRAM 2.73 GB
+  run 5/10: TTFT 470 ms | 95.9 tok/s | 1.00 tok/J | 79C | peak VRAM 2.73 GB
+  run 6/10: TTFT 456 ms | 96.5 tok/s | 0.99 tok/J | 82C | peak VRAM 2.73 GB
+  run 7/10: TTFT 488 ms | 96.2 tok/s | 0.99 tok/J | 80C | peak VRAM 2.73 GB
+  run 8/10: TTFT 463 ms | 95.9 tok/s | 0.98 tok/J | 82C | peak VRAM 2.73 GB
+  run 9/10: TTFT 479 ms | 96.0 tok/s | 0.96 tok/J | 84C | peak VRAM 2.73 GB
+  run 10/10: TTFT 473 ms | 96.3 tok/s | 1.02 tok/J | 81C | peak VRAM 2.73 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+--- sustained load test (240 back-to-back runs) ---
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 132.331 W
+
+=== target context 512 tokens ===
+  warmup 1/2
+  warmup 2/2
+  GPU residency check: 2.73 GB VRAM in use (need >= 1.20 GB)
+  run 1/240: TTFT 132 ms | 103.0 tok/s | 1.23 tok/J | 81C | peak VRAM 2.73 GB
+  run 2/240: TTFT 160 ms | 103.2 tok/s | 1.17 tok/J | 81C | peak VRAM 2.73 GB
+  run 3/240: TTFT 130 ms | 103.0 tok/s | 1.22 tok/J | 81C | peak VRAM 2.73 GB
+  run 4/240: TTFT 166 ms | 103.6 tok/s | 1.09 tok/J | 82C | peak VRAM 2.73 GB
+  run 5/240: TTFT 133 ms | 103.4 tok/s | 1.18 tok/J | 82C | peak VRAM 2.73 GB
+  run 6/240: TTFT 132 ms | 103.5 tok/s | 1.14 tok/J | 82C | peak VRAM 2.73 GB
+  run 7/240: TTFT 130 ms | 103.5 tok/s | 1.22 tok/J | 82C | peak VRAM 2.73 GB
+  run 8/240: TTFT 134 ms | 103.3 tok/s | 1.20 tok/J | 82C | peak VRAM 2.73 GB
+  run 9/240: TTFT 137 ms | 103.5 tok/s | 1.25 tok/J | 82C | peak VRAM 2.73 GB
+  run 10/240: TTFT 137 ms | 103.7 tok/s | 1.17 tok/J | 82C | peak VRAM 2.73 GB
+  run 11/240: TTFT 159 ms | 103.3 tok/s | 1.04 tok/J | 83C | peak VRAM 2.73 GB
+  run 12/240: TTFT 159 ms | 103.6 tok/s | 1.08 tok/J | 83C | peak VRAM 2.73 GB
+  run 13/240: TTFT 138 ms | 103.4 tok/s | 1.22 tok/J | 83C | peak VRAM 2.73 GB
+  run 14/240: TTFT 138 ms | 103.1 tok/s | 1.09 tok/J | 83C | peak VRAM 2.73 GB
+  run 15/240: TTFT 139 ms | 103.5 tok/s | 1.24 tok/J | 83C | peak VRAM 2.73 GB
+  run 16/240: TTFT 162 ms | 103.4 tok/s | 1.14 tok/J | 83C | peak VRAM 2.73 GB
+  run 17/240: TTFT 167 ms | 103.4 tok/s | 1.16 tok/J | 83C | peak VRAM 2.73 GB
+  run 18/240: TTFT 156 ms | 103.5 tok/s | 1.11 tok/J | 83C | peak VRAM 2.73 GB
+  run 19/240: TTFT 142 ms | 103.2 tok/s | 1.09 tok/J | 83C | peak VRAM 2.73 GB
+  run 20/240: TTFT 155 ms | 103.7 tok/s | 1.16 tok/J | 83C | peak VRAM 2.73 GB
+  run 21/240: TTFT 146 ms | 103.5 tok/s | 1.12 tok/J | 83C | peak VRAM 2.73 GB
+  run 22/240: TTFT 155 ms | 103.6 tok/s | 1.15 tok/J | 84C | peak VRAM 2.73 GB
+  run 23/240: TTFT 178 ms | 103.1 tok/s | 1.21 tok/J | 83C | peak VRAM 2.73 GB
+  run 24/240: TTFT 172 ms | 103.8 tok/s | 1.12 tok/J | 84C | peak VRAM 2.73 GB
+  run 25/240: TTFT 166 ms | 103.7 tok/s | 1.16 tok/J | 84C | peak VRAM 2.73 GB
+  run 26/240: TTFT 161 ms | 103.2 tok/s | 1.08 tok/J | 84C | peak VRAM 2.73 GB
+  run 27/240: TTFT 173 ms | 103.7 tok/s | 1.12 tok/J | 84C | peak VRAM 2.73 GB
+  run 28/240: TTFT 174 ms | 103.8 tok/s | 1.19 tok/J | 84C | peak VRAM 2.73 GB
+  run 29/240: TTFT 154 ms | 103.0 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 30/240: TTFT 152 ms | 103.8 tok/s | 1.21 tok/J | 84C | peak VRAM 2.73 GB
+  run 31/240: TTFT 173 ms | 103.3 tok/s | 1.22 tok/J | 84C | peak VRAM 2.73 GB
+  run 32/240: TTFT 199 ms | 103.3 tok/s | 1.12 tok/J | 84C | peak VRAM 2.73 GB
+  run 33/240: TTFT 166 ms | 103.2 tok/s | 1.19 tok/J | 84C | peak VRAM 2.73 GB
+  run 34/240: TTFT 162 ms | 103.2 tok/s | 1.12 tok/J | 84C | peak VRAM 2.73 GB
+  run 35/240: TTFT 156 ms | 103.3 tok/s | 1.15 tok/J | 84C | peak VRAM 2.73 GB
+  run 36/240: TTFT 155 ms | 103.3 tok/s | 1.18 tok/J | 84C | peak VRAM 2.73 GB
+  run 37/240: TTFT 171 ms | 103.3 tok/s | 1.18 tok/J | 84C | peak VRAM 2.73 GB
+  run 38/240: TTFT 169 ms | 103.3 tok/s | 1.19 tok/J | 84C | peak VRAM 2.73 GB
+  run 39/240: TTFT 161 ms | 103.5 tok/s | 1.09 tok/J | 84C | peak VRAM 2.73 GB
+  run 40/240: TTFT 166 ms | 103.4 tok/s | 1.12 tok/J | 84C | peak VRAM 2.73 GB
+  run 41/240: TTFT 159 ms | 103.1 tok/s | 1.18 tok/J | 84C | peak VRAM 2.73 GB
+  run 42/240: TTFT 174 ms | 103.2 tok/s | 1.08 tok/J | 84C | peak VRAM 2.73 GB
+  run 43/240: TTFT 164 ms | 103.0 tok/s | 1.16 tok/J | 84C | peak VRAM 2.73 GB
+  run 44/240: TTFT 166 ms | 103.0 tok/s | 1.19 tok/J | 84C | peak VRAM 2.73 GB
+  run 45/240: TTFT 160 ms | 103.0 tok/s | 1.08 tok/J | 84C | peak VRAM 2.73 GB
+  run 46/240: TTFT 138 ms | 103.2 tok/s | 1.21 tok/J | 84C | peak VRAM 2.73 GB
+  run 47/240: TTFT 165 ms | 103.2 tok/s | 1.07 tok/J | 84C | peak VRAM 2.73 GB
+  run 48/240: TTFT 158 ms | 103.1 tok/s | 1.20 tok/J | 84C | peak VRAM 2.73 GB
+  run 49/240: TTFT 139 ms | 103.5 tok/s | 1.29 tok/J | 84C | peak VRAM 2.73 GB
+  run 50/240: TTFT 148 ms | 103.7 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 51/240: TTFT 162 ms | 103.6 tok/s | 1.09 tok/J | 85C | peak VRAM 2.73 GB
+  run 52/240: TTFT 148 ms | 103.4 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 53/240: TTFT 161 ms | 103.6 tok/s | 1.17 tok/J | 84C | peak VRAM 2.73 GB
+  run 54/240: TTFT 155 ms | 103.4 tok/s | 1.16 tok/J | 84C | peak VRAM 2.73 GB
+  run 55/240: TTFT 173 ms | 103.6 tok/s | 1.15 tok/J | 84C | peak VRAM 2.73 GB
+  run 56/240: TTFT 168 ms | 103.7 tok/s | 1.23 tok/J | 84C | peak VRAM 2.73 GB
+  run 57/240: TTFT 157 ms | 103.6 tok/s | 1.16 tok/J | 84C | peak VRAM 2.73 GB
+  run 58/240: TTFT 150 ms | 103.7 tok/s | 1.27 tok/J | 84C | peak VRAM 2.73 GB
+  run 59/240: TTFT 150 ms | 103.6 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 60/240: TTFT 153 ms | 103.7 tok/s | 1.24 tok/J | 84C | peak VRAM 2.73 GB
+  run 61/240: TTFT 138 ms | 103.9 tok/s | 1.21 tok/J | 85C | peak VRAM 2.73 GB
+  run 62/240: TTFT 154 ms | 103.6 tok/s | 1.22 tok/J | 84C | peak VRAM 2.73 GB
+  run 63/240: TTFT 131 ms | 103.6 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 64/240: TTFT 197 ms | 103.5 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 65/240: TTFT 133 ms | 103.5 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 66/240: TTFT 133 ms | 103.6 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 67/240: TTFT 146 ms | 103.7 tok/s | 1.21 tok/J | 85C | peak VRAM 2.73 GB
+  run 68/240: TTFT 141 ms | 103.1 tok/s | 1.25 tok/J | 85C | peak VRAM 2.73 GB
+  run 69/240: TTFT 141 ms | 103.0 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 70/240: TTFT 149 ms | 102.9 tok/s | 1.25 tok/J | 85C | peak VRAM 2.73 GB
+  run 71/240: TTFT 131 ms | 102.9 tok/s | 1.21 tok/J | 85C | peak VRAM 2.73 GB
+  run 72/240: TTFT 137 ms | 103.0 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 73/240: TTFT 155 ms | 103.0 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 74/240: TTFT 145 ms | 103.0 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 75/240: TTFT 131 ms | 102.7 tok/s | 1.24 tok/J | 85C | peak VRAM 2.73 GB
+  run 76/240: TTFT 152 ms | 102.9 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 77/240: TTFT 141 ms | 103.8 tok/s | 1.09 tok/J | 85C | peak VRAM 2.73 GB
+  run 78/240: TTFT 156 ms | 103.3 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 79/240: TTFT 161 ms | 103.5 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 80/240: TTFT 128 ms | 103.5 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 81/240: TTFT 157 ms | 103.2 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 82/240: TTFT 166 ms | 103.4 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 83/240: TTFT 131 ms | 103.4 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 84/240: TTFT 150 ms | 103.2 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 85/240: TTFT 160 ms | 103.6 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 86/240: TTFT 152 ms | 103.0 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 87/240: TTFT 133 ms | 102.6 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 88/240: TTFT 144 ms | 103.2 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 89/240: TTFT 135 ms | 103.2 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 90/240: TTFT 175 ms | 103.3 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 91/240: TTFT 142 ms | 103.2 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 92/240: TTFT 133 ms | 103.4 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 93/240: TTFT 139 ms | 103.4 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 94/240: TTFT 134 ms | 103.3 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 95/240: TTFT 147 ms | 103.5 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 96/240: TTFT 148 ms | 103.4 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 97/240: TTFT 165 ms | 103.9 tok/s | 1.07 tok/J | 85C | peak VRAM 2.73 GB
+  run 98/240: TTFT 158 ms | 103.7 tok/s | 1.24 tok/J | 85C | peak VRAM 2.73 GB
+  run 99/240: TTFT 146 ms | 103.1 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 100/240: TTFT 177 ms | 103.1 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 101/240: TTFT 145 ms | 103.0 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 102/240: TTFT 150 ms | 103.3 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 103/240: TTFT 151 ms | 104.0 tok/s | 1.25 tok/J | 85C | peak VRAM 2.73 GB
+  run 104/240: TTFT 158 ms | 103.6 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 105/240: TTFT 165 ms | 103.3 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 106/240: TTFT 140 ms | 103.3 tok/s | 1.09 tok/J | 85C | peak VRAM 2.73 GB
+  run 107/240: TTFT 187 ms | 103.2 tok/s | 1.21 tok/J | 85C | peak VRAM 2.73 GB
+  run 108/240: TTFT 169 ms | 103.4 tok/s | 1.12 tok/J | 86C | peak VRAM 2.73 GB
+  run 109/240: TTFT 138 ms | 103.3 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 110/240: TTFT 169 ms | 103.5 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 111/240: TTFT 196 ms | 103.4 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 112/240: TTFT 156 ms | 103.3 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 113/240: TTFT 181 ms | 103.2 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 114/240: TTFT 139 ms | 102.9 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 115/240: TTFT 146 ms | 102.9 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 116/240: TTFT 152 ms | 103.2 tok/s | 1.07 tok/J | 85C | peak VRAM 2.73 GB
+  run 117/240: TTFT 143 ms | 102.8 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 118/240: TTFT 165 ms | 103.2 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 119/240: TTFT 160 ms | 103.2 tok/s | 1.09 tok/J | 85C | peak VRAM 2.73 GB
+  run 120/240: TTFT 192 ms | 102.9 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 121/240: TTFT 198 ms | 102.9 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 122/240: TTFT 150 ms | 103.4 tok/s | 1.21 tok/J | 85C | peak VRAM 2.73 GB
+  run 123/240: TTFT 157 ms | 103.7 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 124/240: TTFT 169 ms | 103.2 tok/s | 1.16 tok/J | 84C | peak VRAM 2.73 GB
+  run 125/240: TTFT 184 ms | 102.9 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 126/240: TTFT 166 ms | 103.5 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 127/240: TTFT 169 ms | 103.4 tok/s | 1.07 tok/J | 85C | peak VRAM 2.73 GB
+  run 128/240: TTFT 174 ms | 103.6 tok/s | 1.15 tok/J | 84C | peak VRAM 2.73 GB
+  run 129/240: TTFT 169 ms | 103.8 tok/s | 1.22 tok/J | 84C | peak VRAM 2.73 GB
+  run 130/240: TTFT 147 ms | 103.4 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 131/240: TTFT 168 ms | 103.5 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 132/240: TTFT 157 ms | 103.3 tok/s | 1.19 tok/J | 84C | peak VRAM 2.73 GB
+  run 133/240: TTFT 149 ms | 103.4 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 134/240: TTFT 145 ms | 103.6 tok/s | 1.28 tok/J | 85C | peak VRAM 2.73 GB
+  run 135/240: TTFT 139 ms | 103.5 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 136/240: TTFT 144 ms | 103.5 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 137/240: TTFT 148 ms | 103.7 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 138/240: TTFT 138 ms | 103.5 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 139/240: TTFT 221 ms | 103.6 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 140/240: TTFT 140 ms | 103.3 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 141/240: TTFT 163 ms | 102.7 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 142/240: TTFT 136 ms | 103.0 tok/s | 1.04 tok/J | 85C | peak VRAM 2.73 GB
+  run 143/240: TTFT 140 ms | 102.9 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 144/240: TTFT 138 ms | 103.1 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 145/240: TTFT 144 ms | 103.0 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 146/240: TTFT 156 ms | 104.0 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 147/240: TTFT 136 ms | 103.1 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 148/240: TTFT 146 ms | 102.9 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 149/240: TTFT 143 ms | 102.8 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 150/240: TTFT 152 ms | 103.3 tok/s | 1.24 tok/J | 85C | peak VRAM 2.73 GB
+  run 151/240: TTFT 152 ms | 103.4 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 152/240: TTFT 161 ms | 103.4 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 153/240: TTFT 164 ms | 103.5 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 154/240: TTFT 163 ms | 103.3 tok/s | 1.10 tok/J | 85C | peak VRAM 2.73 GB
+  run 155/240: TTFT 156 ms | 103.5 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 156/240: TTFT 136 ms | 102.9 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 157/240: TTFT 156 ms | 103.4 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 158/240: TTFT 133 ms | 103.4 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 159/240: TTFT 134 ms | 101.5 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 160/240: TTFT 169 ms | 102.5 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 161/240: TTFT 153 ms | 103.2 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 162/240: TTFT 181 ms | 103.7 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 163/240: TTFT 148 ms | 103.5 tok/s | 1.13 tok/J | 85C | peak VRAM 2.73 GB
+  run 164/240: TTFT 137 ms | 103.2 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 165/240: TTFT 137 ms | 103.6 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 166/240: TTFT 142 ms | 103.3 tok/s | 1.12 tok/J | 86C | peak VRAM 2.73 GB
+  run 167/240: TTFT 147 ms | 103.5 tok/s | 1.15 tok/J | 86C | peak VRAM 2.73 GB
+  run 168/240: TTFT 152 ms | 104.0 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 169/240: TTFT 156 ms | 103.0 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 170/240: TTFT 157 ms | 103.6 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 171/240: TTFT 166 ms | 103.4 tok/s | 1.12 tok/J | 86C | peak VRAM 2.73 GB
+  run 172/240: TTFT 160 ms | 103.8 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 173/240: TTFT 156 ms | 102.9 tok/s | 1.07 tok/J | 85C | peak VRAM 2.73 GB
+  run 174/240: TTFT 148 ms | 102.5 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 175/240: TTFT 144 ms | 103.5 tok/s | 1.24 tok/J | 85C | peak VRAM 2.73 GB
+  run 176/240: TTFT 168 ms | 103.9 tok/s | 1.10 tok/J | 86C | peak VRAM 2.73 GB
+  run 177/240: TTFT 154 ms | 103.4 tok/s | 1.16 tok/J | 86C | peak VRAM 2.73 GB
+  run 178/240: TTFT 163 ms | 103.2 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 179/240: TTFT 139 ms | 103.3 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 180/240: TTFT 148 ms | 103.2 tok/s | 1.04 tok/J | 85C | peak VRAM 2.73 GB
+  run 181/240: TTFT 141 ms | 103.3 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 182/240: TTFT 160 ms | 103.4 tok/s | 1.07 tok/J | 86C | peak VRAM 2.73 GB
+  run 183/240: TTFT 146 ms | 103.4 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 184/240: TTFT 146 ms | 103.3 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 185/240: TTFT 139 ms | 103.3 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 186/240: TTFT 153 ms | 103.2 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 187/240: TTFT 162 ms | 103.0 tok/s | 1.08 tok/J | 85C | peak VRAM 2.73 GB
+  run 188/240: TTFT 148 ms | 103.0 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 189/240: TTFT 157 ms | 102.7 tok/s | 1.16 tok/J | 86C | peak VRAM 2.73 GB
+  run 190/240: TTFT 175 ms | 102.8 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 191/240: TTFT 151 ms | 103.0 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 192/240: TTFT 164 ms | 103.0 tok/s | 1.07 tok/J | 85C | peak VRAM 2.73 GB
+  run 193/240: TTFT 148 ms | 102.8 tok/s | 1.16 tok/J | 85C | peak VRAM 2.73 GB
+  run 194/240: TTFT 163 ms | 102.9 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 195/240: TTFT 154 ms | 103.3 tok/s | 1.11 tok/J | 85C | peak VRAM 2.73 GB
+  run 196/240: TTFT 136 ms | 103.7 tok/s | 1.19 tok/J | 85C | peak VRAM 2.73 GB
+  run 197/240: TTFT 156 ms | 103.7 tok/s | 1.10 tok/J | 85C | peak VRAM 2.73 GB
+  run 198/240: TTFT 161 ms | 103.0 tok/s | 1.14 tok/J | 85C | peak VRAM 2.73 GB
+  run 199/240: TTFT 171 ms | 103.5 tok/s | 1.18 tok/J | 85C | peak VRAM 2.73 GB
+  run 200/240: TTFT 145 ms | 103.5 tok/s | 1.12 tok/J | 85C | peak VRAM 2.73 GB
+  run 201/240: TTFT 146 ms | 103.8 tok/s | 1.22 tok/J | 85C | peak VRAM 2.73 GB
+  run 202/240: TTFT 155 ms | 103.6 tok/s | 1.15 tok/J | 85C | peak VRAM 2.73 GB
+  run 203/240: TTFT 168 ms | 103.4 tok/s | 1.17 tok/J | 85C | peak VRAM 2.73 GB
+  run 204/240: TTFT 169 ms | 103.5 tok/s | 1.10 tok/J | 85C | peak VRAM 2.73 GB
+  run 205/240: TTFT 134 ms | 103.7 tok/s | 1.20 tok/J | 85C | peak VRAM 2.73 GB
+  run 206/240: TTFT 220 ms | 103.4 tok/s | 1.23 tok/J | 85C | peak VRAM 2.73 GB
+  run 207/240: TTFT 139 ms | 103.4 tok/s | 1.18 tok/J | 86C | peak VRAM 2.73 GB
+  run 208/240: TTFT 144 ms | 103.5 tok/s | 1.13 tok/J | 86C | peak VRAM 2.73 GB
+  run 209/240: TTFT 148 ms | 103.4 tok/s | 1.20 tok/J | 86C | peak VRAM 2.73 GB
+  run 210/240: TTFT 171 ms | 103.6 tok/s | 1.11 tok/J | 86C | peak VRAM 2.73 GB
+  run 211/240: TTFT 139 ms | 103.7 tok/s | 1.19 tok/J | 86C | peak VRAM 2.73 GB
+  run 212/240: TTFT 193 ms | 103.4 tok/s | 1.15 tok/J | 86C | peak VRAM 2.73 GB
+  run 213/240: TTFT 173 ms | 103.1 tok/s | 1.11 tok/J | 86C | peak VRAM 2.73 GB
+  run 214/240: TTFT 177 ms | 102.6 tok/s | 1.18 tok/J | 86C | peak VRAM 2.73 GB
+  run 215/240: TTFT 198 ms | 100.5 tok/s | 1.00 tok/J | 86C | peak VRAM 2.73 GB
+  run 216/240: TTFT 147 ms | 102.6 tok/s | 1.11 tok/J | 86C | peak VRAM 2.73 GB
+  run 217/240: TTFT 168 ms | 102.2 tok/s | 1.17 tok/J | 86C | peak VRAM 2.73 GB
+  run 218/240: TTFT 154 ms | 102.5 tok/s | 1.03 tok/J | 86C | peak VRAM 2.73 GB
+  run 219/240: TTFT 136 ms | 102.5 tok/s | 1.14 tok/J | 86C | peak VRAM 2.73 GB
+  run 220/240: TTFT 174 ms | 103.3 tok/s | 1.18 tok/J | 86C | peak VRAM 2.73 GB
+  run 221/240: TTFT 150 ms | 103.0 tok/s | 1.07 tok/J | 86C | peak VRAM 2.73 GB
+  run 222/240: TTFT 142 ms | 103.2 tok/s | 1.25 tok/J | 86C | peak VRAM 2.73 GB
+  run 223/240: TTFT 165 ms | 103.8 tok/s | 1.02 tok/J | 86C | peak VRAM 2.73 GB
+  run 224/240: TTFT 142 ms | 103.6 tok/s | 1.14 tok/J | 86C | peak VRAM 2.73 GB
+  run 225/240: TTFT 152 ms | 103.4 tok/s | 1.16 tok/J | 86C | peak VRAM 2.73 GB
+  run 226/240: TTFT 144 ms | 103.5 tok/s | 1.19 tok/J | 86C | peak VRAM 2.73 GB
+  run 227/240: TTFT 149 ms | 103.4 tok/s | 1.02 tok/J | 86C | peak VRAM 2.73 GB
+  run 228/240: TTFT 140 ms | 103.5 tok/s | 1.26 tok/J | 86C | peak VRAM 2.73 GB
+  run 229/240: TTFT 139 ms | 103.4 tok/s | 1.09 tok/J | 86C | peak VRAM 2.73 GB
+  run 230/240: TTFT 162 ms | 103.5 tok/s | 1.12 tok/J | 86C | peak VRAM 2.73 GB
+  run 231/240: TTFT 142 ms | 103.7 tok/s | 1.17 tok/J | 87C | peak VRAM 2.73 GB
+  run 232/240: TTFT 129 ms | 103.7 tok/s | 1.19 tok/J | 86C | peak VRAM 2.73 GB
+  run 233/240: TTFT 139 ms | 103.2 tok/s | 1.11 tok/J | 86C | peak VRAM 2.73 GB
+  run 234/240: TTFT 141 ms | 103.2 tok/s | 1.18 tok/J | 86C | peak VRAM 2.73 GB
+  run 235/240: TTFT 151 ms | 103.2 tok/s | 1.21 tok/J | 87C | peak VRAM 2.73 GB
+  run 236/240: TTFT 135 ms | 103.5 tok/s | 1.16 tok/J | 86C | peak VRAM 2.73 GB
+  run 237/240: TTFT 135 ms | 103.3 tok/s | 1.08 tok/J | 87C | peak VRAM 2.73 GB
+  run 238/240: TTFT 138 ms | 103.3 tok/s | 1.19 tok/J | 86C | peak VRAM 2.73 GB
+  run 239/240: TTFT 135 ms | 103.3 tok/s | 1.18 tok/J | 86C | peak VRAM 2.73 GB
+  run 240/240: TTFT 132 ms | 103.3 tok/s | 1.23 tok/J | 86C | peak VRAM 2.73 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+########## llamacpp | battery ##########
+Starting llama-server: C:\llama.cpp\llama-server.exe -m D:\Work\ijoc\Llama-3.2-3B-Instruct-Q4_K_M.gguf -ngl 99 -c 4096 --port 8080
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 54.125 W
+
+=== target context 128 tokens ===
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 89 ms | 59.0 tok/s | 1.68 tok/J | 66C | peak VRAM 2.72 GB
+  run 2/10: TTFT 66 ms | 58.3 tok/s | 1.67 tok/J | 67C | peak VRAM 2.72 GB
+  run 3/10: TTFT 70 ms | 56.8 tok/s | 1.57 tok/J | 66C | peak VRAM 2.72 GB
+  run 4/10: TTFT 68 ms | 57.4 tok/s | 1.61 tok/J | 67C | peak VRAM 2.72 GB
+  run 5/10: TTFT 45 ms | 57.1 tok/s | 1.59 tok/J | 68C | peak VRAM 2.72 GB
+  run 6/10: TTFT 45 ms | 58.7 tok/s | 1.82 tok/J | 68C | peak VRAM 2.72 GB
+  run 7/10: TTFT 67 ms | 60.4 tok/s | 1.60 tok/J | 69C | peak VRAM 2.72 GB
+  run 8/10: TTFT 104 ms | 57.3 tok/s | 1.64 tok/J | 69C | peak VRAM 2.72 GB
+  run 9/10: TTFT 58 ms | 59.7 tok/s | 1.56 tok/J | 69C | peak VRAM 2.72 GB
+  run 10/10: TTFT 64 ms | 41.3 tok/s | 1.34 tok/J | 69C | peak VRAM 2.72 GB
+
+=== target context 512 tokens ===
+  cooling: 64C -> 61C
+  cooling: 63C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 157 ms | 55.0 tok/s | 1.53 tok/J | 67C | peak VRAM 2.72 GB
+  run 2/10: TTFT 133 ms | 59.6 tok/s | 1.61 tok/J | 68C | peak VRAM 2.72 GB
+  run 3/10: TTFT 231 ms | 56.7 tok/s | 1.54 tok/J | 68C | peak VRAM 2.72 GB
+  run 4/10: TTFT 124 ms | 58.1 tok/s | 1.63 tok/J | 71C | peak VRAM 2.72 GB
+  run 5/10: TTFT 149 ms | 55.9 tok/s | 1.56 tok/J | 69C | peak VRAM 2.72 GB
+  run 6/10: TTFT 132 ms | 55.6 tok/s | 1.58 tok/J | 70C | peak VRAM 2.72 GB
+  run 7/10: TTFT 224 ms | 56.3 tok/s | 1.49 tok/J | 69C | peak VRAM 2.72 GB
+  run 8/10: TTFT 272 ms | 53.5 tok/s | 1.59 tok/J | 69C | peak VRAM 2.72 GB
+  run 9/10: TTFT 132 ms | 56.0 tok/s | 1.62 tok/J | 70C | peak VRAM 2.72 GB
+  run 10/10: TTFT 148 ms | 54.3 tok/s | 1.59 tok/J | 68C | peak VRAM 2.72 GB
+
+=== target context 2048 tokens ===
+  cooling: 65C -> 61C
+  cooling: 62C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 576 ms | 53.2 tok/s | 1.44 tok/J | 69C | peak VRAM 2.72 GB
+  run 2/10: TTFT 592 ms | 50.1 tok/s | 1.34 tok/J | 69C | peak VRAM 2.72 GB
+  run 3/10: TTFT 518 ms | 54.8 tok/s | 1.42 tok/J | 71C | peak VRAM 2.72 GB
+  run 4/10: TTFT 602 ms | 50.3 tok/s | 1.32 tok/J | 69C | peak VRAM 2.72 GB
+  run 5/10: TTFT 524 ms | 50.3 tok/s | 1.29 tok/J | 71C | peak VRAM 2.72 GB
+  run 6/10: TTFT 615 ms | 51.5 tok/s | 1.39 tok/J | 71C | peak VRAM 2.72 GB
+  run 7/10: TTFT 607 ms | 50.4 tok/s | 1.43 tok/J | 70C | peak VRAM 2.72 GB
+  run 8/10: TTFT 537 ms | 52.0 tok/s | 1.38 tok/J | 71C | peak VRAM 2.72 GB
+  run 9/10: TTFT 550 ms | 50.3 tok/s | 1.37 tok/J | 70C | peak VRAM 2.72 GB
+  run 10/10: TTFT 550 ms | 45.8 tok/s | 1.29 tok/J | 70C | peak VRAM 2.72 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+########## ollama | battery ##########
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU  power limit: 53.375 W
+
+=== target context 128 tokens ===
+  cooling: 62C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 71 ms | 56.0 tok/s | 1.56 tok/J | 67C | peak VRAM 2.72 GB
+  run 2/10: TTFT 70 ms | 55.6 tok/s | 1.77 tok/J | 67C | peak VRAM 2.72 GB
+  run 3/10: TTFT 76 ms | 54.8 tok/s | 1.47 tok/J | 68C | peak VRAM 2.72 GB
+  run 4/10: TTFT 79 ms | 56.3 tok/s | 1.58 tok/J | 68C | peak VRAM 2.72 GB
+  run 5/10: TTFT 78 ms | 58.8 tok/s | 1.61 tok/J | 68C | peak VRAM 2.72 GB
+  run 6/10: TTFT 89 ms | 56.8 tok/s | 1.62 tok/J | 68C | peak VRAM 2.72 GB
+  run 7/10: TTFT 76 ms | 58.9 tok/s | 1.61 tok/J | 68C | peak VRAM 2.72 GB
+  run 8/10: TTFT 118 ms | 52.3 tok/s | 1.57 tok/J | 69C | peak VRAM 2.72 GB
+  run 9/10: TTFT 102 ms | 54.7 tok/s | 1.64 tok/J | 69C | peak VRAM 2.72 GB
+  run 10/10: TTFT 112 ms | 55.4 tok/s | 1.61 tok/J | 69C | peak VRAM 2.72 GB
+
+=== target context 512 tokens ===
+  cooling: 64C -> 61C
+  cooling: 63C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.72 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 171 ms | 54.7 tok/s | 1.50 tok/J | 68C | peak VRAM 2.72 GB
+  run 2/10: TTFT 145 ms | 54.8 tok/s | 1.58 tok/J | 68C | peak VRAM 2.72 GB
+  run 3/10: TTFT 180 ms | 51.8 tok/s | 1.44 tok/J | 68C | peak VRAM 2.72 GB
+  run 4/10: TTFT 344 ms | 42.7 tok/s | 1.39 tok/J | 69C | peak VRAM 2.72 GB
+  run 5/10: TTFT 157 ms | 56.1 tok/s | 1.56 tok/J | 68C | peak VRAM 2.72 GB
+  run 6/10: TTFT 214 ms | 53.8 tok/s | 1.70 tok/J | 69C | peak VRAM 2.72 GB
+  run 7/10: TTFT 229 ms | 48.7 tok/s | 1.36 tok/J | 69C | peak VRAM 2.72 GB
+  run 8/10: TTFT 264 ms | 52.1 tok/s | 1.73 tok/J | 66C | peak VRAM 2.72 GB
+  run 9/10: TTFT 269 ms | 45.9 tok/s | 1.62 tok/J | 66C | peak VRAM 2.72 GB
+  run 10/10: TTFT 289 ms | 48.1 tok/s | 1.59 tok/J | 66C | peak VRAM 2.72 GB
+
+=== target context 2048 tokens ===
+  cooling: 65C -> 61C
+  cooling: 63C -> 61C
+  cooling: 62C -> 61C
+  warmup 1/3
+  warmup 2/3
+  warmup 3/3
+  GPU residency check: 2.73 GB VRAM in use (need >= 1.20 GB)
+  run 1/10: TTFT 576 ms | 50.1 tok/s | 1.33 tok/J | 69C | peak VRAM 2.73 GB
+  run 2/10: TTFT 672 ms | 50.7 tok/s | 1.40 tok/J | 69C | peak VRAM 2.73 GB
+  run 3/10: TTFT 574 ms | 50.4 tok/s | 1.38 tok/J | 69C | peak VRAM 2.73 GB
+  run 4/10: TTFT 648 ms | 49.1 tok/s | 1.36 tok/J | 70C | peak VRAM 2.73 GB
+  run 5/10: TTFT 577 ms | 49.6 tok/s | 1.32 tok/J | 70C | peak VRAM 2.73 GB
+  run 6/10: TTFT 638 ms | 48.7 tok/s | 1.31 tok/J | 70C | peak VRAM 2.73 GB
+  run 7/10: TTFT 619 ms | 48.8 tok/s | 1.31 tok/J | 71C | peak VRAM 2.73 GB
+  run 8/10: TTFT 645 ms | 49.8 tok/s | 1.33 tok/J | 71C | peak VRAM 2.73 GB
+  run 9/10: TTFT 632 ms | 49.2 tok/s | 1.36 tok/J | 71C | peak VRAM 2.73 GB
+  run 10/10: TTFT 666 ms | 48.8 tok/s | 1.40 tok/J | 70C | peak VRAM 2.73 GB
+
+Done. Results appended to D:\Work\ijoc\bench_out\20261107_155841\results.csv
+
+Analyzing...
+                                                                             ttft_ms  ...
+                                                                                mean  ...   std
+label                                model                        target_ctx          ...
+llamacpp | battery                   Llama-3.2-3B-Instruct-Q4_K_M 128          67.66  ...  0.12
+                                                                  512         170.33  ...  0.05
+                                                                  2048        567.16  ...  0.06
+llamacpp | plugged_default           Llama-3.2-3B-Instruct-Q4_K_M 128          49.60  ...  0.06
+                                                                  512         127.29  ...  0.05
+                                                                  2048        444.82  ...  0.04
+llamacpp | sustained_plugged_default Llama-3.2-3B-Instruct-Q4_K_M 512         130.96  ...  0.06
+ollama | battery                     bench-llama32-3b-q4km        128          87.22  ...  0.08
+                                                                  512         226.20  ...  0.12
+                                                                  2048        624.61  ...  0.04
+ollama | plugged_default             bench-llama32-3b-q4km        128          75.27  ...  0.06
+                                                                  512         148.88  ...  0.07
+                                                                  2048        474.27  ...  0.03
+ollama | sustained_plugged_default   bench-llama32-3b-q4km        512         153.82  ...  0.05
+
+[14 rows x 6 columns]
+
+Saved summary.csv and chart_*.png

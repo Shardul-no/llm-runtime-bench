@@ -1,0 +1,5 @@
+requests
+nvidia-ml-py
+pandas
+matplotlib
+psutil
